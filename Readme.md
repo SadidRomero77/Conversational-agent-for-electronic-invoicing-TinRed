@@ -276,10 +276,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Sadid Romero**
-- University Thesis Project
-- December 2025
-
 ---
 
 <p align="center">
