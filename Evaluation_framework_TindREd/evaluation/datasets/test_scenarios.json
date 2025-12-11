@@ -1,0 +1,706 @@
+{
+  "version": "1.0.0",
+  "description": "Dataset de evaluación para Mia Gente - 50 escenarios basados en AgentBench",
+  "created": "2025-11-25",
+  "scenarios": [
+    {
+      "id": "EMI-001",
+      "category": "emission_complete_single",
+      "description": "Boleta completa en un solo mensaje",
+      "conversation": [
+        {"role": "user", "content": "Boleta DNI 12345678, 2 laptops a 2500"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "document_type": "03",
+        "id_type": "1",
+        "id_number": "12345678",
+        "items": [{"cantidad": "2", "descripcion": "laptops", "precio": "2500.00"}],
+        "total": 5000.00,
+        "should_emit": true
+      }
+    },
+    {
+      "id": "EMI-002",
+      "category": "emission_complete_single",
+      "description": "Factura completa con RUC en un mensaje",
+      "conversation": [
+        {"role": "user", "content": "Factura para RUC 20447327776, 10 cajas de papel a 45"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "document_type": "01",
+        "id_type": "6",
+        "id_number": "20447327776",
+        "items": [{"cantidad": "10", "descripcion": "cajas de papel", "precio": "45.00"}],
+        "total": 450.00,
+        "should_emit": true
+      }
+    },
+    {
+      "id": "EMI-003",
+      "category": "emission_step_by_step",
+      "description": "Boleta paso a paso - inicio",
+      "conversation": [
+        {"role": "user", "content": "Quiero emitir una boleta"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "document_type": "03",
+        "should_request": ["id_number"]
+      }
+    },
+    {
+      "id": "EMI-004",
+      "category": "emission_step_by_step",
+      "description": "Boleta paso a paso - con DNI",
+      "conversation": [
+        {"role": "user", "content": "Boleta"},
+        {"role": "assistant", "content": "🧾 BOLETA - ¿DNI o RUC del cliente?"},
+        {"role": "user", "content": "06104011"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "id_type": "1",
+        "id_number": "06104011",
+        "should_request": ["items"]
+      }
+    },
+    {
+      "id": "EMI-005",
+      "category": "emission_step_by_step",
+      "description": "Boleta paso a paso - completa",
+      "conversation": [
+        {"role": "user", "content": "Boleta"},
+        {"role": "assistant", "content": "🧾 BOLETA - ¿DNI o RUC del cliente?"},
+        {"role": "user", "content": "06104011"},
+        {"role": "assistant", "content": "✅ DNI: 06104011. ¿Qué productos?"},
+        {"role": "user", "content": "3 cuadernos a 15 soles"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "document_type": "03",
+        "id_number": "06104011",
+        "items": [{"cantidad": "3", "descripcion": "cuadernos", "precio": "15.00"}],
+        "total": 45.00,
+        "should_show_summary": true
+      }
+    },
+    {
+      "id": "EMI-006",
+      "category": "audio_dni_spaces",
+      "description": "DNI con espacios (transcripción de audio)",
+      "conversation": [
+        {"role": "user", "content": "Boleta para 0 6 1 0 4 0 1 1"}
+      ],
+      "expected": {
+        "id_type": "1",
+        "id_number": "06104011",
+        "extraction_success": true
+      }
+    },
+    {
+      "id": "EMI-007",
+      "category": "audio_dni_spaces",
+      "description": "DNI parcialmente separado",
+      "conversation": [
+        {"role": "user", "content": "El dni es 0610 4011"}
+      ],
+      "expected": {
+        "id_type": "1",
+        "id_number": "06104011",
+        "extraction_success": true
+      }
+    },
+    {
+      "id": "EMI-008",
+      "category": "audio_dni_spaces",
+      "description": "RUC con espacios",
+      "conversation": [
+        {"role": "user", "content": "Factura RUC 2 0 4 4 7 3 2 7 7 7 6"}
+      ],
+      "expected": {
+        "id_type": "6",
+        "id_number": "20447327776",
+        "extraction_success": true
+      }
+    },
+    {
+      "id": "EMI-009",
+      "category": "product_parsing",
+      "description": "Producto sin precio - debe solicitar",
+      "conversation": [
+        {"role": "user", "content": "Boleta DNI 12345678, 2 cuadernos"}
+      ],
+      "expected": {
+        "should_request": ["precio"],
+        "items_detected": true,
+        "price_missing": true
+      }
+    },
+    {
+      "id": "EMI-010",
+      "category": "product_parsing",
+      "description": "Múltiples productos en un mensaje",
+      "conversation": [
+        {"role": "user", "content": "Boleta DNI 87654321, 3 lapiceros a 5, 2 cuadernos a 10, 1 borrador a 2"}
+      ],
+      "expected": {
+        "items": [
+          {"cantidad": "3", "descripcion": "lapiceros", "precio": "5.00"},
+          {"cantidad": "2", "descripcion": "cuadernos", "precio": "10.00"},
+          {"cantidad": "1", "descripcion": "borrador", "precio": "2.00"}
+        ],
+        "total": 37.00
+      }
+    },
+    {
+      "id": "EMI-011",
+      "category": "product_parsing",
+      "description": "Producto con formato alternativo (x)",
+      "conversation": [
+        {"role": "user", "content": "5 unidades x 100 soles cada una"}
+      ],
+      "expected": {
+        "items": [{"cantidad": "5", "precio": "100.00"}],
+        "total": 500.00
+      }
+    },
+    {
+      "id": "EMI-012",
+      "category": "product_parsing",
+      "description": "Producto con formato @",
+      "conversation": [
+        {"role": "user", "content": "10 kilos de arroz @ 3.50"}
+      ],
+      "expected": {
+        "items": [{"cantidad": "10", "descripcion": "kilos de arroz", "precio": "3.50"}],
+        "total": 35.00
+      }
+    },
+    {
+      "id": "EMI-013",
+      "category": "confirmation_flow",
+      "description": "Confirmación positiva - Sí",
+      "conversation": [
+        {"role": "user", "content": "Sí"}
+      ],
+      "context": {"awaiting_confirmation": true, "emission_ready": true},
+      "expected": {
+        "should_emit": true,
+        "action": "execute_emission"
+      }
+    },
+    {
+      "id": "EMI-014",
+      "category": "confirmation_flow",
+      "description": "Confirmación positiva - Dale",
+      "conversation": [
+        {"role": "user", "content": "Dale, emite"}
+      ],
+      "context": {"awaiting_confirmation": true},
+      "expected": {
+        "should_emit": true,
+        "action": "execute_emission"
+      }
+    },
+    {
+      "id": "EMI-015",
+      "category": "confirmation_flow",
+      "description": "Confirmación negativa - No",
+      "conversation": [
+        {"role": "user", "content": "No, cancelar"}
+      ],
+      "context": {"awaiting_confirmation": true},
+      "expected": {
+        "should_emit": false,
+        "action": "cancel_emission"
+      }
+    },
+    {
+      "id": "EMI-016",
+      "category": "cancellation",
+      "description": "Cancelación mid-flow",
+      "conversation": [
+        {"role": "user", "content": "Boleta"},
+        {"role": "assistant", "content": "🧾 BOLETA - ¿DNI o RUC?"},
+        {"role": "user", "content": "Mejor no, cancelar"}
+      ],
+      "expected": {
+        "action": "cancel_emission",
+        "should_reset_state": true
+      }
+    },
+    {
+      "id": "EMI-017",
+      "category": "data_correction",
+      "description": "Corrección de DNI",
+      "conversation": [
+        {"role": "user", "content": "Boleta DNI 12345678"},
+        {"role": "assistant", "content": "✅ DNI: 12345678"},
+        {"role": "user", "content": "No, el DNI correcto es 87654321"}
+      ],
+      "expected": {
+        "id_number": "87654321",
+        "should_update": true
+      }
+    },
+    {
+      "id": "EMI-018",
+      "category": "data_correction",
+      "description": "Cambio de tipo de documento",
+      "conversation": [
+        {"role": "user", "content": "Boleta para 20447327776"},
+        {"role": "assistant", "content": "Resumen de boleta..."},
+        {"role": "user", "content": "Mejor hazlo factura"}
+      ],
+      "expected": {
+        "document_type": "01",
+        "should_update": true
+      }
+    },
+    {
+      "id": "EMI-019",
+      "category": "history_query",
+      "description": "Consulta de historial del día",
+      "conversation": [
+        {"role": "user", "content": "¿Qué emití hoy?"}
+      ],
+      "expected": {
+        "intent": "query_history",
+        "should_list_emissions": true
+      }
+    },
+    {
+      "id": "EMI-020",
+      "category": "history_query",
+      "description": "Consulta de última emisión",
+      "conversation": [
+        {"role": "user", "content": "¿Cuál fue mi última boleta?"}
+      ],
+      "expected": {
+        "intent": "query_history",
+        "filter": "last_boleta"
+      }
+    },
+    {
+      "id": "EMI-021",
+      "category": "history_query",
+      "description": "Consulta de total del día",
+      "conversation": [
+        {"role": "user", "content": "¿Cuánto vendí hoy?"}
+      ],
+      "expected": {
+        "intent": "query_history",
+        "should_sum_totals": true
+      }
+    },
+    {
+      "id": "EMI-022",
+      "category": "product_query",
+      "description": "Consulta de productos disponibles",
+      "conversation": [
+        {"role": "user", "content": "¿Qué productos tengo?"}
+      ],
+      "expected": {
+        "intent": "query_products"
+      }
+    },
+    {
+      "id": "EMI-023",
+      "category": "greeting",
+      "description": "Saludo inicial",
+      "conversation": [
+        {"role": "user", "content": "Hola"}
+      ],
+      "expected": {
+        "intent": "greeting",
+        "should_show_menu": true
+      }
+    },
+    {
+      "id": "EMI-024",
+      "category": "greeting",
+      "description": "Saludo con nombre",
+      "conversation": [
+        {"role": "user", "content": "Buenos días"}
+      ],
+      "expected": {
+        "intent": "greeting",
+        "should_be_friendly": true
+      }
+    },
+    {
+      "id": "EMI-025",
+      "category": "help",
+      "description": "Solicitud de ayuda",
+      "conversation": [
+        {"role": "user", "content": "¿Cómo funciona esto?"}
+      ],
+      "expected": {
+        "intent": "help",
+        "should_explain": true
+      }
+    },
+    {
+      "id": "EMI-026",
+      "category": "ruc_validation",
+      "description": "RUC válido formato 10",
+      "conversation": [
+        {"role": "user", "content": "Factura RUC 10123456789"}
+      ],
+      "expected": {
+        "id_type": "6",
+        "id_number": "10123456789",
+        "valid_ruc": true
+      }
+    },
+    {
+      "id": "EMI-027",
+      "category": "ruc_validation",
+      "description": "RUC válido formato 20",
+      "conversation": [
+        {"role": "user", "content": "RUC 20100047218"}
+      ],
+      "expected": {
+        "id_type": "6",
+        "id_number": "20100047218",
+        "valid_ruc": true
+      }
+    },
+    {
+      "id": "EMI-028",
+      "category": "dni_validation",
+      "description": "DNI con ceros iniciales",
+      "conversation": [
+        {"role": "user", "content": "DNI 00123456"}
+      ],
+      "expected": {
+        "id_type": "1",
+        "id_number": "00123456",
+        "valid_dni": true
+      }
+    },
+    {
+      "id": "EMI-029",
+      "category": "edge_case",
+      "description": "Número ambiguo (8 dígitos que parece cantidad)",
+      "conversation": [
+        {"role": "user", "content": "Boleta DNI 12345678, 12345678 unidades a 1 sol"}
+      ],
+      "expected": {
+        "id_number": "12345678",
+        "items": [{"cantidad": "12345678", "precio": "1.00"}],
+        "disambiguation": true
+      }
+    },
+    {
+      "id": "EMI-030",
+      "category": "edge_case",
+      "description": "Precio con decimales",
+      "conversation": [
+        {"role": "user", "content": "3 productos a 15.50"}
+      ],
+      "expected": {
+        "items": [{"cantidad": "3", "precio": "15.50"}],
+        "total": 46.50
+      }
+    },
+    {
+      "id": "EMI-031",
+      "category": "edge_case",
+      "description": "Precio sin punto decimal",
+      "conversation": [
+        {"role": "user", "content": "2 unidades a 1550 centavos"}
+      ],
+      "expected": {
+        "items": [{"cantidad": "2", "precio": "15.50"}],
+        "interpretation": "centavos_to_soles"
+      }
+    },
+    {
+      "id": "EMI-032",
+      "category": "natural_language",
+      "description": "Solicitud en lenguaje natural",
+      "conversation": [
+        {"role": "user", "content": "Necesito generar un comprobante de venta para un cliente con documento 45678912, le vendí cinco cajas de leche a veinte soles cada una"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "id_number": "45678912",
+        "items": [{"cantidad": "5", "descripcion": "cajas de leche", "precio": "20.00"}],
+        "total": 100.00
+      }
+    },
+    {
+      "id": "EMI-033",
+      "category": "natural_language",
+      "description": "Números en palabras",
+      "conversation": [
+        {"role": "user", "content": "Tres productos a diez soles"}
+      ],
+      "expected": {
+        "items": [{"cantidad": "3", "precio": "10.00"}],
+        "word_to_number": true
+      }
+    },
+    {
+      "id": "EMI-034",
+      "category": "currency",
+      "description": "Monto en dólares",
+      "conversation": [
+        {"role": "user", "content": "Factura por 100 dólares"}
+      ],
+      "expected": {
+        "currency": "USD",
+        "amount": 100.00
+      }
+    },
+    {
+      "id": "EMI-035",
+      "category": "currency",
+      "description": "Monto explícito en soles",
+      "conversation": [
+        {"role": "user", "content": "Total de 500 soles"}
+      ],
+      "expected": {
+        "currency": "PEN",
+        "amount": 500.00
+      }
+    },
+    {
+      "id": "EMI-036",
+      "category": "multiline",
+      "description": "Mensaje multilínea",
+      "conversation": [
+        {"role": "user", "content": "Boleta\nDNI 12345678\n2 productos a 50"}
+      ],
+      "expected": {
+        "document_type": "03",
+        "id_number": "12345678",
+        "items": [{"cantidad": "2", "precio": "50.00"}]
+      }
+    },
+    {
+      "id": "EMI-037",
+      "category": "error_recovery",
+      "description": "Mensaje vacío después de error",
+      "conversation": [
+        {"role": "user", "content": ""},
+        {"role": "assistant", "content": "No recibí tu mensaje..."},
+        {"role": "user", "content": "Boleta DNI 12345678"}
+      ],
+      "expected": {
+        "recovery": true,
+        "intent": "emit_invoice"
+      }
+    },
+    {
+      "id": "EMI-038",
+      "category": "error_recovery",
+      "description": "DNI inválido - muy corto",
+      "conversation": [
+        {"role": "user", "content": "DNI 1234"}
+      ],
+      "expected": {
+        "valid_dni": false,
+        "should_request_correction": true
+      }
+    },
+    {
+      "id": "EMI-039",
+      "category": "error_recovery",
+      "description": "RUC inválido - formato incorrecto",
+      "conversation": [
+        {"role": "user", "content": "RUC 30123456789"}
+      ],
+      "expected": {
+        "valid_ruc": false,
+        "error": "ruc_must_start_10_or_20"
+      }
+    },
+    {
+      "id": "EMI-040",
+      "category": "context_continuation",
+      "description": "Continuación sin repetir datos",
+      "conversation": [
+        {"role": "user", "content": "Boleta DNI 12345678, 2 lapiceros a 5"},
+        {"role": "assistant", "content": "Resumen... ¿Confirmas?"},
+        {"role": "user", "content": "Agrega 3 cuadernos a 10"}
+      ],
+      "expected": {
+        "items": [
+          {"cantidad": "2", "descripcion": "lapiceros", "precio": "5.00"},
+          {"cantidad": "3", "descripcion": "cuadernos", "precio": "10.00"}
+        ],
+        "total": 40.00,
+        "context_preserved": true
+      }
+    },
+    {
+      "id": "EMI-041",
+      "category": "context_continuation",
+      "description": "Referencia a emisión anterior",
+      "conversation": [
+        {"role": "user", "content": "Otra boleta igual que la anterior"}
+      ],
+      "expected": {
+        "should_copy_previous": true,
+        "intent": "emit_invoice"
+      }
+    },
+    {
+      "id": "EMI-042",
+      "category": "special_chars",
+      "description": "Producto con caracteres especiales",
+      "conversation": [
+        {"role": "user", "content": "2 cajas de café \"Premium\" a 50"}
+      ],
+      "expected": {
+        "items": [{"descripcion": "cajas de café Premium", "cantidad": "2", "precio": "50.00"}]
+      }
+    },
+    {
+      "id": "EMI-043",
+      "category": "special_chars",
+      "description": "Producto con tildes",
+      "conversation": [
+        {"role": "user", "content": "5 lápices a 3"}
+      ],
+      "expected": {
+        "items": [{"descripcion": "lápices", "cantidad": "5", "precio": "3.00"}]
+      }
+    },
+    {
+      "id": "EMI-044",
+      "category": "urgency",
+      "description": "Solicitud urgente",
+      "conversation": [
+        {"role": "user", "content": "Urgente! Necesito boleta YA para DNI 12345678, 1 servicio a 200"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "priority": "high"
+      }
+    },
+    {
+      "id": "EMI-045",
+      "category": "ambiguous",
+      "description": "Intent ambiguo - podría ser consulta o emisión",
+      "conversation": [
+        {"role": "user", "content": "Boleta 12345678"}
+      ],
+      "expected": {
+        "possible_intents": ["emit_invoice", "query_specific_boleta"],
+        "should_clarify": true
+      }
+    },
+    {
+      "id": "EMI-046",
+      "category": "batch",
+      "description": "Solicitud de múltiples emisiones",
+      "conversation": [
+        {"role": "user", "content": "Necesito hacer 3 boletas"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "batch_mode": true,
+        "count": 3
+      }
+    },
+    {
+      "id": "EMI-047",
+      "category": "modification",
+      "description": "Modificar cantidad",
+      "conversation": [
+        {"role": "user", "content": "Cambia la cantidad a 5"}
+      ],
+      "context": {"has_pending_emission": true},
+      "expected": {
+        "action": "modify_quantity",
+        "new_quantity": "5"
+      }
+    },
+    {
+      "id": "EMI-048",
+      "category": "modification",
+      "description": "Modificar precio",
+      "conversation": [
+        {"role": "user", "content": "El precio correcto es 25"}
+      ],
+      "context": {"has_pending_emission": true},
+      "expected": {
+        "action": "modify_price",
+        "new_price": "25.00"
+      }
+    },
+    {
+      "id": "EMI-049",
+      "category": "complex",
+      "description": "Escenario complejo multi-item con corrección",
+      "conversation": [
+        {"role": "user", "content": "Factura RUC 20447327776"},
+        {"role": "assistant", "content": "✅ Factura para RUC 20447327776. ¿Productos?"},
+        {"role": "user", "content": "10 cajas a 50, 5 bolsas a 20, 3 paquetes a 30"},
+        {"role": "assistant", "content": "Total S/690.00. ¿Confirmas?"},
+        {"role": "user", "content": "No, cambia las cajas a 8"}
+      ],
+      "expected": {
+        "items": [
+          {"cantidad": "8", "descripcion": "cajas", "precio": "50.00"},
+          {"cantidad": "5", "descripcion": "bolsas", "precio": "20.00"},
+          {"cantidad": "3", "descripcion": "paquetes", "precio": "30.00"}
+        ],
+        "total": 590.00,
+        "modification_applied": true
+      }
+    },
+    {
+      "id": "EMI-050",
+      "category": "stress",
+      "description": "Mensaje muy largo con ruido",
+      "conversation": [
+        {"role": "user", "content": "Hola buenas tardes disculpa la molestia quisiera saber si me puedes ayudar a generar una boleta de venta para un cliente que tiene DNI número 45678912 y le vendí algunos productos que fueron específicamente 3 unidades de papel bond a un precio de 15 soles cada paquete por favor y gracias de antemano"}
+      ],
+      "expected": {
+        "intent": "emit_invoice",
+        "document_type": "03",
+        "id_number": "45678912",
+        "items": [{"cantidad": "3", "descripcion": "papel bond", "precio": "15.00"}],
+        "total": 45.00,
+        "noise_filtered": true
+      }
+    }
+  ],
+  "metadata": {
+    "total_scenarios": 50,
+    "categories": {
+      "emission_complete_single": 2,
+      "emission_step_by_step": 3,
+      "audio_dni_spaces": 3,
+      "product_parsing": 4,
+      "confirmation_flow": 3,
+      "cancellation": 1,
+      "data_correction": 2,
+      "history_query": 3,
+      "product_query": 1,
+      "greeting": 2,
+      "help": 1,
+      "ruc_validation": 2,
+      "dni_validation": 1,
+      "edge_case": 3,
+      "natural_language": 2,
+      "currency": 2,
+      "multiline": 1,
+      "error_recovery": 3,
+      "context_continuation": 2,
+      "special_chars": 2,
+      "urgency": 1,
+      "ambiguous": 1,
+      "batch": 1,
+      "modification": 2,
+      "complex": 1,
+      "stress": 1
+    }
+  }
+}

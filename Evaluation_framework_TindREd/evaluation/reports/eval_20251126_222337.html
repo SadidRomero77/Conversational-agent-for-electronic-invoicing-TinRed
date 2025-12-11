@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación TinRed Agent</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; margin-bottom: 8px; }
+        .timestamp { color: #666; font-size: 14px; margin-bottom: 24px; }
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .metric { text-align: center; padding: 16px; border-radius: 8px; }
+        .metric.passed { background: #e8f5e9; }
+        .metric.failed { background: #ffebee; }
+        .metric.rate { background: #e3f2fd; }
+        .metric-value { font-size: 36px; font-weight: bold; }
+        .metric-label { color: #666; font-size: 14px; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; font-weight: 600; }
+        .status { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; }
+        .status.passed { background: #c8e6c9; color: #2e7d32; }
+        .status.failed { background: #ffcdd2; color: #c62828; }
+        .status.skipped { background: #fff9c4; color: #f9a825; }
+        .progress { width: 100%; height: 8px; background: #ffcdd2; border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: #4caf50; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🤖 Evaluación TinRed Agent</h1>
+            <p class="timestamp">Generado: 2025-11-26T22:23:37.829056</p>
+            
+            <div class="metrics">
+                <div class="metric passed">
+                    <div class="metric-value">50</div>
+                    <div class="metric-label">✅ Pasados</div>
+                </div>
+                <div class="metric failed">
+                    <div class="metric-value">6</div>
+                    <div class="metric-label">❌ Fallidos</div>
+                </div>
+                <div class="metric rate">
+                    <div class="metric-value">89.3%</div>
+                    <div class="metric-label">Tasa de Éxito</div>
+                </div>
+            </div>
+            
+            <div class="progress">
+                <div class="progress-bar" style="width: 89.28571428571429%"></div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>📊 Resultados por Categoría</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Total</th>
+                        <th>Pasados</th>
+                        <th>Fallidos</th>
+                        <th>Tasa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>emission_boleta</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>emission_factura</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>validation_dni</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>validation_ruc</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>validation_client</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>cancellation</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>history</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>products</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>context_switching</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>edge_cases</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>format_variations</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>multi_turn</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>corrections</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>stress_tests</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>intent_classification</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>1</td>
+                        <td>86%</td>
+                    </tr>
+                    <tr>
+                        <td>data_extraction</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>real_emission_tests</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>batch_validation</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>100%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>📋 Todos los Tests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EMI-BOL-001</td>
+                        <td>Boleta simple con DNI válido</td>
+                        <td>emission_boleta</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2352ms</td>
+                    </tr>
+                    <tr>
+                        <td>EMI-BOL-002</td>
+                        <td>Boleta múltiples productos</td>
+                        <td>emission_boleta</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2435ms</td>
+                    </tr>
+                    <tr>
+                        <td>EMI-BOL-003</td>
+                        <td>Boleta todo junto en un mensaje</td>
+                        <td>emission_boleta</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2079ms</td>
+                    </tr>
+                    <tr>
+                        <td>EMI-FAC-001</td>
+                        <td>Factura simple con RUC válido</td>
+                        <td>emission_factura</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>265ms</td>
+                    </tr>
+                    <tr>
+                        <td>EMI-FAC-002</td>
+                        <td>Factura múltiples productos alto valor</td>
+                        <td>emission_factura</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2207ms</td>
+                    </tr>
+                    <tr>
+                        <td>EMI-FAC-003</td>
+                        <td>Factura todo en un mensaje</td>
+                        <td>emission_factura</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2355ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-DNI-001</td>
+                        <td>DNI inválido - muy corto</td>
+                        <td>validation_dni</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>263ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-DNI-002</td>
+                        <td>DNI inválido - muy largo</td>
+                        <td>validation_dni</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>265ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-DNI-003</td>
+                        <td>DNI inválido - contiene letras</td>
+                        <td>validation_dni</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>262ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-RUC-001</td>
+                        <td>RUC inválido - muy corto</td>
+                        <td>validation_ruc</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>261ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-RUC-002</td>
+                        <td>RUC inválido - prefijo incorrecto</td>
+                        <td>validation_ruc</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>264ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-CLI-001</td>
+                        <td>Cliente no encontrado</td>
+                        <td>validation_client</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>262ms</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-CLI-002</td>
+                        <td>Cliente encontrado - mostrar nombre</td>
+                        <td>validation_client</td>
+                        <td><span class="status failed">FAILED</span></td>
+                        <td>264ms</td>
+                    </tr>
+                    <tr>
+                        <td>CAN-001</td>
+                        <td>Cancelar durante solicitud de documento</td>
+                        <td>cancellation</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>270ms</td>
+                    </tr>
+                    <tr>
+                        <td>CAN-002</td>
+                        <td>Cancelar en confirmación</td>
+                        <td>cancellation</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>1133ms</td>
+                    </tr>
+                    <tr>
+                        <td>CAN-003</td>
+                        <td>Cancelar con variaciones de lenguaje</td>
+                        <td>cancellation</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>261ms</td>
+                    </tr>
+                    <tr>
+                        <td>HIST-001</td>
+                        <td>Consultar historial</td>
+                        <td>history</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>260ms</td>
+                    </tr>
+                    <tr>
+                        <td>HIST-002</td>
+                        <td>Detalle de historial por número</td>
+                        <td>history</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>269ms</td>
+                    </tr>
+                    <tr>
+                        <td>HIST-003</td>
+                        <td>Detalle de la última emisión</td>
+                        <td>history</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>263ms</td>
+                    </tr>
+                    <tr>
+                        <td>HIST-004</td>
+                        <td>Navegación secuencial en historial</td>
+                        <td>history</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>264ms</td>
+                    </tr>
+                    <tr>
+                        <td>PROD-001</td>
+                        <td>Ver lista de productos</td>
+                        <td>products</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>275ms</td>
+                    </tr>
+                    <tr>
+                        <td>PROD-002</td>
+                        <td>Buscar producto específico</td>
+                        <td>products</td>
+                        <td><span class="status failed">FAILED</span></td>
+                        <td>259ms</td>
+                    </tr>
+                    <tr>
+                        <td>PROD-003</td>
+                        <td>Seleccionar producto de búsqueda</td>
+                        <td>products</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>263ms</td>
+                    </tr>
+                    <tr>
+                        <td>PROD-004</td>
+                        <td>Emitir desde producto seleccionado</td>
+                        <td>products</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>269ms</td>
+                    </tr>
+                    <tr>
+                        <td>PROD-005</td>
+                        <td>Búsqueda sin resultados</td>
+                        <td>products</td>
+                        <td><span class="status failed">FAILED</span></td>
+                        <td>268ms</td>
+                    </tr>
+                    <tr>
+                        <td>CTX-001</td>
+                        <td>Cambio de historial a productos</td>
+                        <td>context_switching</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>270ms</td>
+                    </tr>
+                    <tr>
+                        <td>CTX-002</td>
+                        <td>Interrupción de emisión por consulta</td>
+                        <td>context_switching</td>
+                        <td><span class="status failed">FAILED</span></td>
+                        <td>258ms</td>
+                    </tr>
+                    <tr>
+                        <td>EDGE-001</td>
+                        <td>Producto con precio muy bajo</td>
+                        <td>edge_cases</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2887ms</td>
+                    </tr>
+                    <tr>
+                        <td>EDGE-002</td>
+                        <td>Múltiples productos mismo nombre</td>
+                        <td>edge_cases</td>
+                        <td><span class="status failed">FAILED</span></td>
+                        <td>268ms</td>
+                    </tr>
+                    <tr>
+                        <td>EDGE-003</td>
+                        <td>Cantidad alta de productos</td>
+                        <td>edge_cases</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>1965ms</td>
+                    </tr>
+                    <tr>
+                        <td>EDGE-004</td>
+                        <td>Precio con decimales</td>
+                        <td>edge_cases</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>267ms</td>
+                    </tr>
+                    <tr>
+                        <td>EDGE-005</td>
+                        <td>Mensaje vacío o espacios</td>
+                        <td>edge_cases</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>267ms</td>
+                    </tr>
+                    <tr>
+                        <td>FORM-001</td>
+                        <td>DNI con espacios</td>
+                        <td>format_variations</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>263ms</td>
+                    </tr>
+                    <tr>
+                        <td>FORM-002</td>
+                        <td>Precio con formato diferente</td>
+                        <td>format_variations</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>263ms</td>
+                    </tr>
+                    <tr>
+                        <td>FORM-003</td>
+                        <td>Cantidad en palabras</td>
+                        <td>format_variations</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>269ms</td>
+                    </tr>
+                    <tr>
+                        <td>MULTI-001</td>
+                        <td>Conversación larga de emisión</td>
+                        <td>multi_turn</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>276ms</td>
+                    </tr>
+                    <tr>
+                        <td>MULTI-002</td>
+                        <td>Agregar más productos</td>
+                        <td>multi_turn</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>270ms</td>
+                    </tr>
+                    <tr>
+                        <td>CORR-001</td>
+                        <td>Corregir documento</td>
+                        <td>corrections</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>257ms</td>
+                    </tr>
+                    <tr>
+                        <td>STRESS-001</td>
+                        <td>Muchos productos en una emisión</td>
+                        <td>stress_tests</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>262ms</td>
+                    </tr>
+                    <tr>
+                        <td>STRESS-002</td>
+                        <td>Descripción de producto muy larga</td>
+                        <td>stress_tests</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>264ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-001</td>
+                        <td>Intent: Emisión explícita</td>
+                        <td>intent_classification</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-002</td>
+                        <td>Intent: Consulta productos</td>
+                        <td>intent_classification</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-003</td>
+                        <td>Intent: Consulta historial</td>
+                        <td>intent_classification</td>
+                        <td><span class="status failed">FAILED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-004</td>
+                        <td>Intent: Pregunta general</td>
+                        <td>intent_classification</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-005</td>
+                        <td>Intent: Cancelación</td>
+                        <td>intent_classification</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-006</td>
+                        <td>Intent: Confirmación</td>
+                        <td>intent_classification</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>INTENT-007</td>
+                        <td>Intent: Saludo</td>
+                        <td>intent_classification</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>DATA-001</td>
+                        <td>Extraer DNI de mensaje</td>
+                        <td>data_extraction</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>DATA-002</td>
+                        <td>Extraer RUC de mensaje</td>
+                        <td>data_extraction</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>DATA-003</td>
+                        <td>Extraer productos de mensaje</td>
+                        <td>data_extraction</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2ms</td>
+                    </tr>
+                    <tr>
+                        <td>DATA-004</td>
+                        <td>Extraer mensaje completo</td>
+                        <td>data_extraction</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>REAL-001</td>
+                        <td>Emisión real - Boleta con DNI válido 1</td>
+                        <td>real_emission_tests</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2244ms</td>
+                    </tr>
+                    <tr>
+                        <td>REAL-002</td>
+                        <td>Emisión real - Factura con RUC válido 1</td>
+                        <td>real_emission_tests</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>266ms</td>
+                    </tr>
+                    <tr>
+                        <td>REAL-003</td>
+                        <td>Emisión real - Boleta múltiples items</td>
+                        <td>real_emission_tests</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>2304ms</td>
+                    </tr>
+                    <tr>
+                        <td>BATCH-DNI-001</td>
+                        <td>Validación batch de DNIs</td>
+                        <td>batch_validation</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                    <tr>
+                        <td>BATCH-RUC-001</td>
+                        <td>Validación batch de RUCs</td>
+                        <td>batch_validation</td>
+                        <td><span class="status passed">PASSED</span></td>
+                        <td>0ms</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

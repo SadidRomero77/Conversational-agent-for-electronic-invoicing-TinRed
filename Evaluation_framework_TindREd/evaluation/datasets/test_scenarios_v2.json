@@ -1,0 +1,1734 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-11-26",
+    "description": "Dataset de evaluación con datos reales para TinRed Agent",
+    "total_scenarios": 56,
+    "notes": "Preguntas generales y saludos excluidos (considerados features opcionales)"
+  },
+  "test_data": {
+    "valid_dni": [
+      "22462864",
+      "22494016",
+      "41580986",
+      "22477390",
+      "22502870",
+      "22664744",
+      "42152812",
+      "07518135",
+      "22470472",
+      "40393949",
+      "41464461",
+      "80217731",
+      "22493358",
+      "22509648",
+      "00000018",
+      "22500900",
+      "22507136",
+      "22749533",
+      "22724520",
+      "21001896",
+      "42773013",
+      "22475397",
+      "22481031",
+      "04216332",
+      "22409599",
+      "46603752",
+      "80124323",
+      "22507346",
+      "22491457",
+      "74164652",
+      "74175265",
+      "22465435",
+      "80246257",
+      "22425835",
+      "45986337",
+      "44066863",
+      "40742601",
+      "22511785",
+      "45874509",
+      "40608147",
+      "22750425",
+      "41977630",
+      "22420112",
+      "22416103",
+      "10774301",
+      "41504861",
+      "22744392",
+      "44122082",
+      "41636895",
+      "22476123",
+      "40728915",
+      "22413503",
+      "22720540",
+      "22405565"
+    ],
+    "valid_ruc": [
+      "10422980925",
+      "10423339778",
+      "10463199723",
+      "10404089370",
+      "10770902571",
+      "20609029189",
+      "10448710179",
+      "20573293275",
+      "20601080134",
+      "20362427798",
+      "10426346082",
+      "20573218494",
+      "20603976275",
+      "20605763732",
+      "20612517453",
+      "10474562901",
+      "20489677874",
+      "10452699040",
+      "20573124597",
+      "15601305116",
+      "20609291177",
+      "10734438354",
+      "10757507051",
+      "10472429944",
+      "10404681147",
+      "20529274395",
+      "10224985971",
+      "10224074617",
+      "20608954091",
+      "10415597270",
+      "20614288656",
+      "20611547928",
+      "20489372259",
+      "20603233809",
+      "20608404717",
+      "10763724455",
+      "10401780420",
+      "20166891494",
+      "10703462460",
+      "20528982698",
+      "10225113365",
+      "20609236940",
+      "10225152514",
+      "20231326210",
+      "20489555175",
+      "20404655532",
+      "10448105267",
+      "10437470265",
+      "20604824037",
+      "20607980102",
+      "20611641169",
+      "10103092197",
+      "20611051621",
+      "20489566886",
+      "10225101782",
+      "10474247452",
+      "10422127327",
+      "10705072286",
+      "10224128997"
+    ],
+    "invalid_dni": [
+      "1234567",
+      "123456789",
+      "ABCDEFGH",
+      "12345ABC",
+      "00000000",
+      "99999999",
+      "11111111",
+      "",
+      "12 34 56 78"
+    ],
+    "invalid_ruc": [
+      "1234567890",
+      "123456789012",
+      "ABCDEFGHIJK",
+      "30000000000",
+      "00000000000",
+      "99999999999",
+      "",
+      "20 609 029 189"
+    ],
+    "products": [
+      {
+        "name": "FILETE DE CABALLA SUSI MAR X 48UNI",
+        "price": 411.12
+      },
+      {
+        "name": "LEJIA CLOROX ANTISPLASH 595ML X 15",
+        "price": 4.0
+      },
+      {
+        "name": "PANETON DONOFRIO LATA 880GR X 6UNI",
+        "price": 41.0
+      },
+      {
+        "name": "LAVAVAJIA LAVAX CREMA 850GR X 12UNI",
+        "price": 18.9
+      },
+      {
+        "name": "LECHE IDEAL CREMOSA MZC LC 390GRX24",
+        "price": 25.82
+      },
+      {
+        "name": "JABON NEKO BOLSA 110GR X 48UNI",
+        "price": 147.02
+      },
+      {
+        "name": "NOSOTRAS NAT. BUENAS NOCHES X10 (CJ X 18)",
+        "price": 223.99
+      },
+      {
+        "name": "COÑAG BUENA VENTURA 165CC X 48UNI",
+        "price": 242.02
+      },
+      {
+        "name": "PANETON DONOFRIO BOLSA 880GR X 6UNI",
+        "price": 299.0
+      },
+      {
+        "name": "VINAGRE BUENA VENTURA 1LT X 12UNI",
+        "price": 552.43
+      },
+      {
+        "name": "JABON MONCLER 145GR X 48UNI",
+        "price": 86.02
+      },
+      {
+        "name": "FIDEO NICOLINI C/ANGEL 250GR X 40",
+        "price": 21.5
+      },
+      {
+        "name": "DETERGENTE ARIEL REG-REV 720GR X14",
+        "price": 56.0
+      },
+      {
+        "name": "P.H SUAVE NARANJA RESISTEMAX 2X10",
+        "price": 22.0
+      },
+      {
+        "name": "ACEITE NORCHEFF CC NARANJA 18LTXBLD",
+        "price": 411.0
+      },
+      {
+        "name": "DETERGENTE OPAL SPORT 350GR X 30UNI",
+        "price": 120.0
+      },
+      {
+        "name": "PANETONCITO GUSTOZZI 70GR X 60UNI",
+        "price": 48.0
+      },
+      {
+        "name": "CREMA PONDS SACHET 10GR X 20UNI",
+        "price": 38.0
+      },
+      {
+        "name": "JABON LAVANDINA 150GR X 40UNI",
+        "price": 5.0
+      },
+      {
+        "name": "ACEITE COCINERO 5LT X 4 BIDON",
+        "price": 45.0
+      },
+      {
+        "name": "ANISADO BUENA VENTURA 165CC X 48UNI",
+        "price": 121.01
+      },
+      {
+        "name": "JABON BELNATUR GLICERINA 90GR X 24U",
+        "price": 22.5
+      },
+      {
+        "name": "HARINA MOLICENTRO PREM PASTELE X 50KG",
+        "price": 52.5
+      },
+      {
+        "name": "ACEITE OLIVOS DEL SUR EXTRA VIRGEN 500ML X 12UNI",
+        "price": 56.0
+      },
+      {
+        "name": "ACEITE DE COCO SANTIS POMO 220ML X 12UNI",
+        "price": 27.0
+      },
+      {
+        "name": "CREMA DENTO ANTICARIES 80GR X 12",
+        "price": 9.0
+      },
+      {
+        "name": "DETERGENTE MARSELLA PROFESIONAL X 13.5KG",
+        "price": 332.05
+      },
+      {
+        "name": "DETERG BOLIVAR ACTIV-FL 330GR X30UN",
+        "price": 296.04
+      },
+      {
+        "name": "SUAVITEL GALON 8.5LT X 3UNI",
+        "price": 65.0
+      },
+      {
+        "name": "ARROZ ALEJANDRINA X 25KG",
+        "price": 45.0
+      },
+      {
+        "name": "DETERGENTE MARSELLA 4KG X 4 BOL",
+        "price": 145.0
+      },
+      {
+        "name": "ESCALERA 2 PASOS MILO",
+        "price": 0.1
+      },
+      {
+        "name": "DET BOLIVAR ACTIV-FL-UL 450GR X24UN",
+        "price": 420.05
+      },
+      {
+        "name": "DET BOLIVAR ACTIV-FL 730-750GR X15U",
+        "price": 84.0
+      },
+      {
+        "name": "DET BOLIVAR ACTIVE CARE 2.4KG X 6UNI",
+        "price": 140.0
+      },
+      {
+        "name": "DET BOLIVAR ACTIVE-FL-EVOLU 4.2X4",
+        "price": 218.75
+      },
+      {
+        "name": "TINA MAGIA BLANCA 14LT",
+        "price": 0.2
+      },
+      {
+        "name": "DETERGENTE OPAL UL-FL-LIM 2.4KG X 6",
+        "price": 23.5
+      },
+      {
+        "name": "PAÑO ABSORBENTE VIRUTEX X 20UNI",
+        "price": 15.62
+      },
+      {
+        "name": "VINAGRE VENTURO BLAN-TINT 1000 X12",
+        "price": 5.1
+      },
+      {
+        "name": "MARGARINA MANTY 300GR X 12POT",
+        "price": 5.73
+      },
+      {
+        "name": "DURAZNO COMPASS MITADES 820GR X 12UNI",
+        "price": 8.85
+      },
+      {
+        "name": "HARINA DOÑA ANGELICA PANAD ESP 50KG",
+        "price": 285.0
+      },
+      {
+        "name": "AZUCAR BLANCA DOMESTICA IMPORTADA X 50KG",
+        "price": 123.06
+      },
+      {
+        "name": "CEPILLO DENTAL EXTRA CLEAN DISP X 12+2",
+        "price": 136.08
+      },
+      {
+        "name": "CHOCOLATE CUSCO REAL 80GR X 12 X 6D",
+        "price": 124.03
+      },
+      {
+        "name": "ACEITE SOYA BELTRAN 900ML X 12UNI",
+        "price": 13.8
+      },
+      {
+        "name": "LIMPIATODO SAPOLIO 4.9L - 5LT X 4UN",
+        "price": 120.0
+      },
+      {
+        "name": "DESINFECTANTE SAPOLIO PINO 5LT X 4GAL",
+        "price": 18.0
+      },
+      {
+        "name": "ACEITE MIRASOL 900ML X 12UNI",
+        "price": 40.5
+      },
+      {
+        "name": "AYUDIN LIQUIDO LIM 2600MLX 6UNI",
+        "price": 31.5
+      },
+      {
+        "name": "LIMPIATODO DKASA 900ML X 12 UNI",
+        "price": 29.0
+      },
+      {
+        "name": "DESODORANTE AXE 97GR+DEO 97GR",
+        "price": 84.0
+      },
+      {
+        "name": "FIDEO ANITA JUAN ANT SPAGUETTI X10K",
+        "price": 10.5
+      },
+      {
+        "name": "CHICLE ADAM`S MENTA X100UNI X 54DIS",
+        "price": 102.5
+      },
+      {
+        "name": "AZUCAR RUBIA DOMESTICA X 50KG",
+        "price": 84.0
+      },
+      {
+        "name": "DETERGENTE ACE LIM-LIMP.COMP 4KX4UN",
+        "price": 41.0
+      },
+      {
+        "name": "LECHE GLORIA LIGHT ROJA 390GR X 24U",
+        "price": 96.0
+      },
+      {
+        "name": "ACEITE RACIMO DE SOL 900ML X 12UNI",
+        "price": 79.34
+      },
+      {
+        "name": "PANETON DONOFRIO CAJA 880GR X 6UNI",
+        "price": 77.5
+      },
+      {
+        "name": "HARINA B/NIEVE EXTRA PAPEL X 50",
+        "price": 10.02
+      },
+      {
+        "name": "P.H SUPER AHORRADOR (VERDE) 2X10",
+        "price": 115.0
+      },
+      {
+        "name": "P.H SUAVIDAD 1X20",
+        "price": 11.0
+      },
+      {
+        "name": "MOSTAZA ALPESA 2KG X 5UNI",
+        "price": 57.0
+      },
+      {
+        "name": "TINAPA DE SARDINA SALSA DE TOMATE SUSI MAR X 48UNI",
+        "price": 4.4
+      },
+      {
+        "name": "VINAGRE DEL FIRME BL-TIN 1100X12 DP",
+        "price": 15.2
+      },
+      {
+        "name": "SHAMPU PANTENE 400ML X 12UNI",
+        "price": 130.5
+      },
+      {
+        "name": "TE CANELA Y CLAVO HERBI 16DIS X 100",
+        "price": 16.8
+      },
+      {
+        "name": "CREMA DENTO HERBAL 180GR + CEPILLO X 48UNI",
+        "price": 292.52
+      },
+      {
+        "name": "DETERGENTE MARSELLA 2KG X 7BOL",
+        "price": 528.08
+      },
+      {
+        "name": "P.H SUAVE JUNIOR D/H 8 BOLSAS X 1 PAQ X 6UNI",
+        "price": 97.38
+      },
+      {
+        "name": "CAFE CAFETAL SELECTO 200GR X 24UNI",
+        "price": 252.0
+      },
+      {
+        "name": "GELATINA UMSHA 120GR X 24UNI",
+        "price": 209.0
+      },
+      {
+        "name": "LENTEJA ESTON X 45.36KG BEBE",
+        "price": 100.8
+      },
+      {
+        "name": "ARVERJA PARTIDA AMERICANA (PLASTICO)45.36KG",
+        "price": 84.6
+      },
+      {
+        "name": "COCOA WINTERS POTE 180GR X 24UNI",
+        "price": 324.0
+      },
+      {
+        "name": "VINAGRE DEL FIRME BL-TIN 1000X12 BOT",
+        "price": 280.06
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "EMI-BOL-001",
+      "category": "emission_boleta",
+      "name": "Boleta simple con DNI válido",
+      "description": "Emisión de boleta con un producto y DNI válido",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Quiero emitir una boleta"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "DNI 22462864, 2 PANETON DONOFRIO LATA 880GR X 6UNI a 41"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Si"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "03",
+        "id_type": "1",
+        "id_number": "22462864",
+        "items": [
+          {
+            "cantidad": "2",
+            "descripcion": "PANETON DONOFRIO LATA 880GR X 6UNI",
+            "precio": "41"
+          }
+        ],
+        "total": 82.0
+      },
+      "validation": {
+        "client_must_exist": true,
+        "total_must_match": true
+      }
+    },
+    {
+      "id": "EMI-BOL-002",
+      "category": "emission_boleta",
+      "name": "Boleta múltiples productos",
+      "description": "Emisión de boleta con varios productos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 41580986"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_products"
+        },
+        {
+          "role": "user",
+          "content": "3 JABON NEKO BOLSA 110GR X 48UNI a 147.02, 2 DETERGENTE ARIEL REG-REV 720GR X14 a 56"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Confirmo"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "03",
+        "id_type": "1",
+        "id_number": "41580986",
+        "items": [
+          {
+            "cantidad": "3",
+            "descripcion": "JABON NEKO BOLSA 110GR X 48UNI",
+            "precio": "147.02"
+          },
+          {
+            "cantidad": "2",
+            "descripcion": "DETERGENTE ARIEL REG-REV 720GR X14",
+            "precio": "56"
+          }
+        ],
+        "total": 553.06
+      }
+    },
+    {
+      "id": "EMI-BOL-003",
+      "category": "emission_boleta",
+      "name": "Boleta todo junto en un mensaje",
+      "description": "Usuario envía tipo, DNI y productos en un solo mensaje",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22477390, 5 ACEITE COCINERO 5LT X 4 BIDON a 45, 10 ARROZ ALEJANDRINA X 25KG a 45"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Dale"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "03",
+        "id_number": "22477390",
+        "total": 675.0
+      }
+    },
+    {
+      "id": "EMI-FAC-001",
+      "category": "emission_factura",
+      "name": "Factura simple con RUC válido",
+      "description": "Emisión de factura con un producto y RUC válido",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "RUC 20609029189"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_products"
+        },
+        {
+          "role": "user",
+          "content": "1 HARINA DOÑA ANGELICA PANAD ESP 50KG a 285"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Si, emite"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "01",
+        "id_type": "6",
+        "id_number": "20609029189",
+        "items": [
+          {
+            "cantidad": "1",
+            "descripcion": "HARINA DOÑA ANGELICA PANAD ESP 50KG",
+            "precio": "285"
+          }
+        ],
+        "total": 285.0
+      }
+    },
+    {
+      "id": "EMI-FAC-002",
+      "category": "emission_factura",
+      "name": "Factura múltiples productos alto valor",
+      "description": "Factura con productos de alto valor",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Necesito una factura para RUC 20573293275"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_products"
+        },
+        {
+          "role": "user",
+          "content": "2 FILETE DE CABALLA SUSI MAR X 48UNI a 411.12, 1 VINAGRE BUENA VENTURA 1LT X 12UNI a 552.43"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Correcto"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "01",
+        "id_number": "20573293275",
+        "total": 1374.67
+      }
+    },
+    {
+      "id": "EMI-FAC-003",
+      "category": "emission_factura",
+      "name": "Factura todo en un mensaje",
+      "description": "Factura completa en un solo mensaje",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura RUC 20601080134, 3 DETERGENTE MARSELLA PROFESIONAL X 13.5KG a 332.05"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Adelante"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "01",
+        "id_number": "20601080134",
+        "total": 996.15
+      }
+    },
+    {
+      "id": "VAL-DNI-001",
+      "category": "validation_dni",
+      "name": "DNI inválido - muy corto",
+      "description": "Usuario ingresa DNI con menos de 8 dígitos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 1234567, 1 producto a 100"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_valid_document"
+        }
+      ],
+      "expected_behavior": "reject_invalid_dni"
+    },
+    {
+      "id": "VAL-DNI-002",
+      "category": "validation_dni",
+      "name": "DNI inválido - muy largo",
+      "description": "Usuario ingresa DNI con más de 8 dígitos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "123456789"
+        }
+      ],
+      "expected_behavior": "reject_invalid_dni"
+    },
+    {
+      "id": "VAL-DNI-003",
+      "category": "validation_dni",
+      "name": "DNI inválido - contiene letras",
+      "description": "Usuario ingresa DNI con caracteres no numéricos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI ABCD1234, 1 item a 50"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_valid_document"
+        }
+      ],
+      "expected_behavior": "reject_invalid_dni"
+    },
+    {
+      "id": "VAL-RUC-001",
+      "category": "validation_ruc",
+      "name": "RUC inválido - muy corto",
+      "description": "Usuario ingresa RUC con menos de 11 dígitos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura RUC 1234567890, 1 producto a 100"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_valid_document"
+        }
+      ],
+      "expected_behavior": "reject_invalid_ruc"
+    },
+    {
+      "id": "VAL-RUC-002",
+      "category": "validation_ruc",
+      "name": "RUC inválido - prefijo incorrecto",
+      "description": "RUC que no empieza con 10 o 20",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura RUC 30000000000"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_valid_document"
+        }
+      ],
+      "expected_behavior": "reject_invalid_ruc"
+    },
+    {
+      "id": "VAL-CLI-001",
+      "category": "validation_client",
+      "name": "Cliente no encontrado",
+      "description": "DNI válido pero cliente no existe en el sistema",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 99999999, 1 producto a 50"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "client_not_found"
+        }
+      ],
+      "expected_behavior": "request_reconfirmation"
+    },
+    {
+      "id": "VAL-CLI-002",
+      "category": "validation_client",
+      "name": "Cliente encontrado - mostrar nombre",
+      "description": "DNI válido y cliente existe, mostrar nombre",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22462864, 1 JABON NEKO a 147.02"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "cliente encontrado"
+        }
+      ],
+      "expected_behavior": "show_client_name"
+    },
+    {
+      "id": "CAN-001",
+      "category": "cancellation",
+      "name": "Cancelar durante solicitud de documento",
+      "description": "Usuario cancela cuando se le pide el documento",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "Cancelar"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "cancellation_confirmed"
+        }
+      ],
+      "expected_behavior": "clean_session"
+    },
+    {
+      "id": "CAN-002",
+      "category": "cancellation",
+      "name": "Cancelar en confirmación",
+      "description": "Usuario cancela cuando ve el resumen",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22462864, 2 items a 100"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "No"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "cancellation_confirmed"
+        }
+      ],
+      "expected_behavior": "clean_session"
+    },
+    {
+      "id": "CAN-003",
+      "category": "cancellation",
+      "name": "Cancelar con variaciones de lenguaje",
+      "description": "Diferentes formas de cancelar",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "mejor no, olvídalo"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "cancellation_confirmed"
+        }
+      ],
+      "expected_behavior": "clean_session"
+    },
+    {
+      "id": "HIST-001",
+      "category": "history",
+      "name": "Consultar historial",
+      "description": "Usuario solicita ver su historial",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Quiero ver mi historial"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "historial",
+            "emisiones"
+          ]
+        }
+      ],
+      "expected_behavior": "show_history_list"
+    },
+    {
+      "id": "HIST-002",
+      "category": "history",
+      "name": "Detalle de historial por número",
+      "description": "Usuario pide detalle de una emisión específica",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Historial"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_history"
+        },
+        {
+          "role": "user",
+          "content": "5"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "detalle",
+            "factura",
+            "cliente"
+          ]
+        }
+      ],
+      "expected_behavior": "show_history_detail"
+    },
+    {
+      "id": "HIST-003",
+      "category": "history",
+      "name": "Detalle de la última emisión",
+      "description": "Usuario pide ver su última emisión",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Detalles de la última"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "detalle"
+          ]
+        }
+      ],
+      "expected_behavior": "show_last_emission"
+    },
+    {
+      "id": "HIST-004",
+      "category": "history",
+      "name": "Navegación secuencial en historial",
+      "description": "Usuario navega entre varias emisiones",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Historial"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_history"
+        },
+        {
+          "role": "user",
+          "content": "3"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "detalle"
+        },
+        {
+          "role": "user",
+          "content": "5"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "detalle"
+        }
+      ],
+      "expected_behavior": "maintain_history_context"
+    },
+    {
+      "id": "PROD-001",
+      "category": "products",
+      "name": "Ver lista de productos",
+      "description": "Usuario solicita ver sus productos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Ver productos"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "productos",
+            "S/"
+          ]
+        }
+      ],
+      "expected_behavior": "show_products_list"
+    },
+    {
+      "id": "PROD-002",
+      "category": "products",
+      "name": "Buscar producto específico",
+      "description": "Usuario busca un producto",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Busca detergente"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "resultados",
+            "detergente"
+          ]
+        }
+      ],
+      "expected_behavior": "show_search_results"
+    },
+    {
+      "id": "PROD-003",
+      "category": "products",
+      "name": "Seleccionar producto de búsqueda",
+      "description": "Usuario selecciona un producto de los resultados",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Busca arroz"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_search_results"
+        },
+        {
+          "role": "user",
+          "content": "1"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "producto",
+            "precio"
+          ]
+        }
+      ],
+      "expected_behavior": "show_product_detail"
+    },
+    {
+      "id": "PROD-004",
+      "category": "products",
+      "name": "Emitir desde producto seleccionado",
+      "description": "Usuario confirma emitir con producto seleccionado",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Ver productos"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_products"
+        },
+        {
+          "role": "user",
+          "content": "1"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "emitir"
+        },
+        {
+          "role": "user",
+          "content": "Si"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": [
+            "factura",
+            "boleta"
+          ]
+        }
+      ],
+      "expected_behavior": "start_emission_flow"
+    },
+    {
+      "id": "PROD-005",
+      "category": "products",
+      "name": "Búsqueda sin resultados",
+      "description": "Usuario busca producto que no existe",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Busca xyzabc123"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "no encontr"
+        }
+      ],
+      "expected_behavior": "show_no_results"
+    },
+    {
+      "id": "CTX-001",
+      "category": "context_switching",
+      "name": "Cambio de historial a productos",
+      "description": "Usuario cambia de contexto",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Historial"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_history"
+        },
+        {
+          "role": "user",
+          "content": "Ver productos"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "productos"
+        }
+      ],
+      "expected_behavior": "switch_context"
+    },
+    {
+      "id": "CTX-002",
+      "category": "context_switching",
+      "name": "Interrupción de emisión por consulta",
+      "description": "Usuario pregunta algo durante emisión",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "¿Qué es el IGV?"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "IGV"
+        }
+      ],
+      "expected_behavior": "answer_and_continue"
+    },
+    {
+      "id": "EDGE-001",
+      "category": "edge_cases",
+      "name": "Producto con precio muy bajo",
+      "description": "Emisión con producto de precio mínimo",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22494016, 1 ESCALERA 2 PASOS MILO a 0.10"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Si"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "total": 0.1
+      }
+    },
+    {
+      "id": "EDGE-002",
+      "category": "edge_cases",
+      "name": "Múltiples productos mismo nombre",
+      "description": "Productos con nombres similares",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Busca harina"
+        },
+        {
+          "role": "assistant",
+          "expected_contains": "resultados"
+        }
+      ],
+      "expected_behavior": "show_multiple_results"
+    },
+    {
+      "id": "EDGE-003",
+      "category": "edge_cases",
+      "name": "Cantidad alta de productos",
+      "description": "Emisión con cantidad grande",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura RUC 20362427798, 100 ARROZ ALEJANDRINA X 25KG a 45"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Confirmo"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "total": 4500.0
+      }
+    },
+    {
+      "id": "EDGE-004",
+      "category": "edge_cases",
+      "name": "Precio con decimales",
+      "description": "Productos con precios decimales",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22502870, 3 LECHE IDEAL CREMOSA MZC LC 390GRX24 a 25.82"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        }
+      ],
+      "expected_data": {
+        "total": 77.46
+      }
+    },
+    {
+      "id": "EDGE-005",
+      "category": "edge_cases",
+      "name": "Mensaje vacío o espacios",
+      "description": "Usuario envía mensaje vacío",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "   "
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_clarification"
+        }
+      ],
+      "expected_behavior": "handle_empty_message"
+    },
+    {
+      "id": "FORM-001",
+      "category": "format_variations",
+      "name": "DNI con espacios",
+      "description": "Usuario ingresa DNI con espacios",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22 462 864, 1 producto a 50"
+        },
+        {
+          "role": "assistant",
+          "expected_behavior": "parse_dni_with_spaces"
+        }
+      ]
+    },
+    {
+      "id": "FORM-002",
+      "category": "format_variations",
+      "name": "Precio con formato diferente",
+      "description": "Usuario usa diferentes formatos de precio",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22664744, 2 items a S/45.50"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        }
+      ]
+    },
+    {
+      "id": "FORM-003",
+      "category": "format_variations",
+      "name": "Cantidad en palabras",
+      "description": "Usuario escribe cantidad en palabras",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 42152812, dos jabones a 5 cada uno"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        }
+      ]
+    },
+    {
+      "id": "MULTI-001",
+      "category": "multi_turn",
+      "name": "Conversación larga de emisión",
+      "description": "Emisión paso a paso completa",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Hola"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "greeting"
+        },
+        {
+          "role": "user",
+          "content": "Quiero hacer una factura"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_document"
+        },
+        {
+          "role": "user",
+          "content": "20609029189"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "request_products"
+        },
+        {
+          "role": "user",
+          "content": "5 DETERGENTE ARIEL REG-REV 720GR X14 a 56"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Perfecto, confirmo"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "document_type": "01",
+        "id_number": "20609029189",
+        "total": 280.0
+      }
+    },
+    {
+      "id": "MULTI-002",
+      "category": "multi_turn",
+      "name": "Agregar más productos",
+      "description": "Usuario agrega productos adicionales",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 07518135, 2 jabones a 5"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Agrega 3 detergentes a 10"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_updated_summary"
+        },
+        {
+          "role": "user",
+          "content": "Ahora si"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "expected_data": {
+        "total": 40.0
+      }
+    },
+    {
+      "id": "CORR-001",
+      "category": "corrections",
+      "name": "Corregir documento",
+      "description": "Usuario corrige el documento ingresado",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 99999999, 1 item a 50"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "client_not_found"
+        },
+        {
+          "role": "user",
+          "content": "22470472"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        }
+      ],
+      "expected_behavior": "accept_correction"
+    },
+    {
+      "id": "STRESS-001",
+      "category": "stress_tests",
+      "name": "Muchos productos en una emisión",
+      "description": "Emisión con 5+ productos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura RUC 20573218494, 1 ARROZ a 45, 2 AZUCAR a 123, 3 ACEITE a 45, 4 JABON a 5, 5 DETERGENTE a 56"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        }
+      ],
+      "expected_data": {
+        "items_count": 5
+      }
+    },
+    {
+      "id": "STRESS-002",
+      "category": "stress_tests",
+      "name": "Descripción de producto muy larga",
+      "description": "Producto con nombre extenso",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 40393949, 1 NOSOTRAS NAT. BUENAS NOCHES X10 (CJ X 18) a 223.99"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        }
+      ]
+    },
+    {
+      "id": "INTENT-001",
+      "category": "intent_classification",
+      "name": "Intent: Emisión explícita",
+      "description": "Detectar intención de emisión",
+      "input": "Quiero emitir una factura",
+      "expected_intent": "EMIT_INVOICE"
+    },
+    {
+      "id": "INTENT-002",
+      "category": "intent_classification",
+      "name": "Intent: Consulta productos",
+      "description": "Detectar consulta de productos",
+      "input": "Ver mis productos",
+      "expected_intent": "QUERY_PRODUCTS"
+    },
+    {
+      "id": "INTENT-003",
+      "category": "intent_classification",
+      "name": "Intent: Consulta historial",
+      "description": "Detectar consulta de historial",
+      "input": "Muéstrame mi historial",
+      "expected_intent": "QUERY_HISTORY"
+    },
+    {
+      "id": "INTENT-004",
+      "category": "intent_classification",
+      "name": "Intent: Pregunta general",
+      "description": "Detectar pregunta informativa",
+      "input": "¿Qué diferencia hay entre factura y boleta?",
+      "expected_intent": "GENERAL_QUESTION"
+    },
+    {
+      "id": "INTENT-005",
+      "category": "intent_classification",
+      "name": "Intent: Cancelación",
+      "description": "Detectar intención de cancelar",
+      "input": "Cancelar",
+      "expected_intent": "CANCEL"
+    },
+    {
+      "id": "INTENT-006",
+      "category": "intent_classification",
+      "name": "Intent: Confirmación",
+      "description": "Detectar confirmación",
+      "input": "Si, confirmo",
+      "expected_intent": "CONFIRMATION"
+    },
+    {
+      "id": "INTENT-007",
+      "category": "intent_classification",
+      "name": "Intent: Saludo",
+      "description": "Detectar saludo",
+      "input": "Hola buenos días",
+      "expected_intent": "GREETING"
+    },
+    {
+      "id": "DATA-001",
+      "category": "data_extraction",
+      "name": "Extraer DNI de mensaje",
+      "description": "Extracción correcta de DNI",
+      "input": "Boleta para DNI 22462864 por favor",
+      "expected_extraction": {
+        "document_type": "03",
+        "id_type": "1",
+        "id_number": "22462864"
+      }
+    },
+    {
+      "id": "DATA-002",
+      "category": "data_extraction",
+      "name": "Extraer RUC de mensaje",
+      "description": "Extracción correcta de RUC",
+      "input": "Factura RUC 20609029189",
+      "expected_extraction": {
+        "document_type": "01",
+        "id_type": "6",
+        "id_number": "20609029189"
+      }
+    },
+    {
+      "id": "DATA-003",
+      "category": "data_extraction",
+      "name": "Extraer productos de mensaje",
+      "description": "Extracción de productos con cantidad y precio",
+      "input": "3 jabones a 5, 2 detergentes a 10",
+      "expected_extraction": {
+        "items": [
+          {
+            "cantidad": "3",
+            "precio": "5"
+          },
+          {
+            "cantidad": "2",
+            "precio": "10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "DATA-004",
+      "category": "data_extraction",
+      "name": "Extraer mensaje completo",
+      "description": "Extracción completa de un mensaje",
+      "input": "Boleta DNI 41580986, 5 PANETON DONOFRIO LATA 880GR X 6UNI a 41",
+      "expected_extraction": {
+        "document_type": "03",
+        "id_number": "41580986",
+        "items": [
+          {
+            "cantidad": "5",
+            "descripcion": "PANETON DONOFRIO LATA 880GR X 6UNI",
+            "precio": "41"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REAL-001",
+      "category": "real_emission_tests",
+      "name": "Emisión real - Boleta con DNI válido 1",
+      "description": "Test de emisión real con datos válidos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 22462864, 1 PANETON DONOFRIO LATA 880GR X 6UNI a 41"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Si"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "real_test": true,
+      "expected_api_response": {
+        "success": "TRUE"
+      }
+    },
+    {
+      "id": "REAL-002",
+      "category": "real_emission_tests",
+      "name": "Emisión real - Factura con RUC válido 1",
+      "description": "Test de emisión real de factura",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Factura RUC 20609029189, 2 DETERGENTE ARIEL REG-REV 720GR X14 a 56"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Confirmo"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "real_test": true
+    },
+    {
+      "id": "REAL-003",
+      "category": "real_emission_tests",
+      "name": "Emisión real - Boleta múltiples items",
+      "description": "Test con varios productos",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Boleta DNI 41580986, 2 JABON NEKO BOLSA 110GR X 48UNI a 147.02, 1 ACEITE COCINERO 5LT X 4 BIDON a 45"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "show_summary"
+        },
+        {
+          "role": "user",
+          "content": "Dale"
+        },
+        {
+          "role": "assistant",
+          "expected_intent": "emission_success"
+        }
+      ],
+      "real_test": true
+    },
+    {
+      "id": "BATCH-DNI-001",
+      "category": "batch_validation",
+      "name": "Validación batch de DNIs",
+      "description": "Validar múltiples DNIs",
+      "batch_test": true,
+      "documents": [
+        "22462864",
+        "22494016",
+        "41580986",
+        "22477390",
+        "22502870"
+      ],
+      "expected_valid": true
+    },
+    {
+      "id": "BATCH-RUC-001",
+      "category": "batch_validation",
+      "name": "Validación batch de RUCs",
+      "description": "Validar múltiples RUCs",
+      "batch_test": true,
+      "documents": [
+        "10422980925",
+        "20609029189",
+        "20573293275",
+        "20601080134",
+        "20362427798"
+      ],
+      "expected_valid": true
+    }
+  ],
+  "summary": {
+    "categories": {
+      "emission_boleta": 3,
+      "emission_factura": 3,
+      "validation_dni": 3,
+      "validation_ruc": 2,
+      "validation_client": 2,
+      "cancellation": 3,
+      "history": 4,
+      "products": 5,
+      "general_questions": 4,
+      "greetings": 2,
+      "context_switching": 2,
+      "edge_cases": 5,
+      "format_variations": 3,
+      "multi_turn": 2,
+      "corrections": 1,
+      "stress_tests": 2,
+      "intent_classification": 7,
+      "data_extraction": 4,
+      "real_emission_tests": 3,
+      "batch_validation": 2
+    },
+    "total_scenarios": 62,
+    "total_dni": 54,
+    "total_ruc": 59,
+    "total_products": 77
+  }
+}

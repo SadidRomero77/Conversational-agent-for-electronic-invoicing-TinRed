@@ -1,0 +1,1200 @@
+{
+  "timestamp": "2025-11-26T22:23:37.829056",
+  "summary": {
+    "total": 56,
+    "passed": 50,
+    "failed": 6,
+    "skipped": 0,
+    "errors": 0,
+    "pass_rate": "89.29%",
+    "duration_ms": 30741.047859191895
+  },
+  "by_category": {
+    "emission_boleta": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "emission_factura": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "validation_dni": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "validation_ruc": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "validation_client": {
+      "total": 2,
+      "passed": 1,
+      "failed": 1
+    },
+    "cancellation": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "history": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "products": {
+      "total": 5,
+      "passed": 3,
+      "failed": 2
+    },
+    "context_switching": {
+      "total": 2,
+      "passed": 1,
+      "failed": 1
+    },
+    "edge_cases": {
+      "total": 5,
+      "passed": 4,
+      "failed": 1
+    },
+    "format_variations": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "multi_turn": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "corrections": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "stress_tests": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "intent_classification": {
+      "total": 7,
+      "passed": 6,
+      "failed": 1
+    },
+    "data_extraction": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "real_emission_tests": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "batch_validation": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "results": [
+    {
+      "scenario_id": "EMI-BOL-001",
+      "category": "emission_boleta",
+      "name": "Boleta simple con DNI válido",
+      "status": "passed",
+      "duration_ms": 2351.902484893799,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 3
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EMI-BOL-002",
+      "category": "emission_boleta",
+      "name": "Boleta múltiples productos",
+      "status": "passed",
+      "duration_ms": 2434.5576763153076,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 3
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EMI-BOL-003",
+      "category": "emission_boleta",
+      "name": "Boleta todo junto en un mensaje",
+      "status": "passed",
+      "duration_ms": 2079.3488025665283,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EMI-FAC-001",
+      "category": "emission_factura",
+      "name": "Factura simple con RUC válido",
+      "status": "passed",
+      "duration_ms": 265.2316093444824,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165734510.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165734510.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 4
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EMI-FAC-002",
+      "category": "emission_factura",
+      "name": "Factura múltiples productos alto valor",
+      "status": "passed",
+      "duration_ms": 2207.3512077331543,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165734510.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165760873.98\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 3
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EMI-FAC-003",
+      "category": "emission_factura",
+      "name": "Factura todo en un mensaje",
+      "status": "passed",
+      "duration_ms": 2354.5172214508057,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762534.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-DNI-001",
+      "category": "validation_dni",
+      "name": "DNI inválido - muy corto",
+      "status": "passed",
+      "duration_ms": 262.7694606781006,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-DNI-002",
+      "category": "validation_dni",
+      "name": "DNI inválido - muy largo",
+      "status": "passed",
+      "duration_ms": 265.1970386505127,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-DNI-003",
+      "category": "validation_dni",
+      "name": "DNI inválido - contiene letras",
+      "status": "passed",
+      "duration_ms": 261.65246963500977,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-RUC-001",
+      "category": "validation_ruc",
+      "name": "RUC inválido - muy corto",
+      "status": "passed",
+      "duration_ms": 261.2612247467041,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-RUC-002",
+      "category": "validation_ruc",
+      "name": "RUC inválido - prefijo incorrecto",
+      "status": "passed",
+      "duration_ms": 264.4476890563965,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-CLI-001",
+      "category": "validation_client",
+      "name": "Cliente no encontrado",
+      "status": "passed",
+      "duration_ms": 261.9948387145996,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762634.23\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "VAL-CLI-002",
+      "category": "validation_client",
+      "name": "Cliente encontrado - mostrar nombre",
+      "status": "failed",
+      "duration_ms": 264.1880512237549,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n  • 1x jabon neko @ S/147.02 = S/147.02\n  • 1x neko @ S/147.02 = S/147.02\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762928.27\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "failed_at": 1,
+        "validation": {
+          "passed": false,
+          "errors": [
+            "Respuesta no contiene: 'cliente encontrado'"
+          ]
+        }
+      },
+      "errors": [
+        "Respuesta no contiene: 'cliente encontrado'"
+      ]
+    },
+    {
+      "scenario_id": "CAN-001",
+      "category": "cancellation",
+      "name": "Cancelar durante solicitud de documento",
+      "status": "passed",
+      "duration_ms": 269.63186264038086,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n  • 50x kg @ S/285.00 = S/14250.00\n  • 48x uni @ S/411.12 = S/19733.76\n  • 1x vinagre buena ventur @ S/1.00 = S/1.00\n  • 12x uni @ S/552.43 = S/6629.16\n  • 5x kg @ S/332.05 = S/1660.25\n  • 1x producto @ S/100.00 = S/100.00\n  • 1x jabon neko @ S/147.02 = S/147.02\n  • 1x neko @ S/147.02 = S/147.02\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165762928.27\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "❌ Cancelado.\n\n¿Qué más necesitas?"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "CAN-002",
+      "category": "cancellation",
+      "name": "Cancelar en confirmación",
+      "status": "passed",
+      "duration_ms": 1132.6501369476318,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 BOLETA 🧾\n\n📋 DNI: 22462864\n👤 WALTER VIRGILIO VILLANUEVA TELLO\n\n📦 Productos:\n  • 2x items @ S/100.00 = S/200.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/200.00\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "❌ Cancelado.\n\n¿Qué más necesitas?"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "CAN-003",
+      "category": "cancellation",
+      "name": "Cancelar con variaciones de lenguaje",
+      "status": "passed",
+      "duration_ms": 261.37852668762207,
+      "details": {
+        "responses": [
+          {
+            "reply": "📄 ¡Perfecto! Vamos con la Factura.\n\nPrimero necesito validar al cliente.\n\n1️⃣ Dame el RUC (11 dígitos) para verificar que existe en el sistema\n2️⃣ Luego me indicas los productos con sus precios\n\n💡 Puedes enviarme todo junto si lo prefieres:\n\"RUC 20161541991, 3 laptops a 2500\"\n\n¿Cuál es el RUC del cliente?"
+          },
+          {
+            "reply": "❌ Operación cancelada.\n\n¿Qué más necesitas?\n📄 Factura | 🧾 Boleta | 📊 Historial"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "HIST-001",
+      "category": "history",
+      "name": "Consultar historial",
+      "status": "passed",
+      "duration_ms": 259.7360610961914,
+      "details": {
+        "responses": [
+          {
+            "reply": "📊 **Tu historial, Sadid Romero**\n\n📅 **Hoy** (4):\n   1. 🧾 B020-00000333: S/7386.96\n   2. 🧾 B020-00000334: S/1305.00\n   3. 🧾 F004-00000011: S/40613.92\n   4. 🧾 F004-00000012: S/1660.25\n\n📋 **Últimas emisiones** (10):\n\n1. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/472.00 | 📅 2018-09-06\n\n2. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n3. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n4. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n5. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n6. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n7. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n8. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n9. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n10. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n💡 Escribe un número para ver detalle (ej: \"5\")"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "HIST-002",
+      "category": "history",
+      "name": "Detalle de historial por número",
+      "status": "passed",
+      "duration_ms": 268.7675952911377,
+      "details": {
+        "responses": [
+          {
+            "reply": "📊 **Tu historial, Sadid Romero**\n\n📅 **Hoy** (4):\n   1. 🧾 B020-00000333: S/7386.96\n   2. 🧾 B020-00000334: S/1305.00\n   3. 🧾 F004-00000011: S/40613.92\n   4. 🧾 F004-00000012: S/1660.25\n\n📋 **Últimas emisiones** (10):\n\n1. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/472.00 | 📅 2018-09-06\n\n2. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n3. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n4. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n5. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n6. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n7. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n8. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n9. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n10. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n💡 Escribe un número para ver detalle (ej: \"5\")"
+          },
+          {
+            "reply": "📋 **Detalle de Factura #5**\n\n📅 **Fecha:** 2018-09-06\n📄 **Número:** Sin serie\n\n👤 **Cliente:** COLORES IMPRESOS S.A.C\n   RUC: 20505184697\n\n📦 **Detalle:**\n   1x Servicio de Facturación Electrónica correspondiente al mes de agosto 2018\n   Precio unit: S/100.00\n\n💰 **Totales:**\n   Subtotal: S/100.00\n   IGV: S/18.00\n   **Total: S/118.00**\n\n💡 Escribe otro número para ver otra emisión."
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "HIST-003",
+      "category": "history",
+      "name": "Detalle de la última emisión",
+      "status": "passed",
+      "duration_ms": 263.2761001586914,
+      "details": {
+        "responses": [
+          {
+            "reply": "🧾 **Detalle de Boleta**\n\n📋 **Número:** F004-00000012\n📅 **Fecha:** 2025-11-26 22:17\n👤 **Cliente:** 20601080134\n📦 **Items:** 1 producto(s)\n💰 **Total:** S/1660.25\n📥 **PDF:** http://test.tinred.pe/SisFact/SisFact/factpdf/F004/00000012/01/4000/26-11-2025/20447327776\n\n¿Necesitas algo más?"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "HIST-004",
+      "category": "history",
+      "name": "Navegación secuencial en historial",
+      "status": "passed",
+      "duration_ms": 263.5312080383301,
+      "details": {
+        "responses": [
+          {
+            "reply": "📊 **Tu historial, Sadid Romero**\n\n📅 **Hoy** (4):\n   1. 🧾 B020-00000333: S/7386.96\n   2. 🧾 B020-00000334: S/1305.00\n   3. 🧾 F004-00000011: S/40613.92\n   4. 🧾 F004-00000012: S/1660.25\n\n📋 **Últimas emisiones** (10):\n\n1. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/472.00 | 📅 2018-09-06\n\n2. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n3. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n4. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n5. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n6. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n7. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n8. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n9. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n10. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n💡 Escribe un número para ver detalle (ej: \"5\")"
+          },
+          {
+            "reply": "📋 **Detalle de Factura #3**\n\n📅 **Fecha:** 2018-09-06\n📄 **Número:** Sin serie\n\n👤 **Cliente:** COLORES IMPRESOS S.A.C\n   RUC: 20505184697\n\n📦 **Detalle:**\n   1x Implementación de Sistema de Facturación Electrónica\n   Precio unit: S/1000.00\n\n💰 **Totales:**\n   Subtotal: S/1000.00\n   IGV: S/180.00\n   **Total: S/1180.00**\n\n💡 Escribe otro número para ver otra emisión."
+          },
+          {
+            "reply": "📋 **Detalle de Factura #5**\n\n📅 **Fecha:** 2018-09-06\n📄 **Número:** Sin serie\n\n👤 **Cliente:** COLORES IMPRESOS S.A.C\n   RUC: 20505184697\n\n📦 **Detalle:**\n   1x Servicio de Facturación Electrónica correspondiente al mes de agosto 2018\n   Precio unit: S/100.00\n\n💰 **Totales:**\n   Subtotal: S/100.00\n   IGV: S/18.00\n   **Total: S/118.00**\n\n💡 Escribe otro número para ver otra emisión."
+          }
+        ],
+        "turns": 3
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "PROD-001",
+      "category": "products",
+      "name": "Ver lista de productos",
+      "status": "passed",
+      "duration_ms": 274.8291492462158,
+      "details": {
+        "responses": [
+          {
+            "reply": "📦 **Tus productos** (15 de 443):\n\n1. POLLO BENEFICIADO ABIERTO - S/4.87\n2. COLGATE HERBAL 90G COLGATE PALMOLIVE - S/2.97\n3. POLLO BENEFICIADO V - S/4.19\n4. SERVICIOS ESPECIALIZADOS - S/4.19\n5. GALLINA MARRON CERRADA BENEFICIADA - S/5.93\n6. DIBROLAX TABLETAS, 5MG, CAJA 100 TABLETAS FARMI... - S/1.27\n7. HIGANATUR CÁPSULA BLANDA, 300MG SHERFARMA - S/2.97\n8. HUGGIES TOALLITAS HUMEDAS AMARILLA 80UNDS PAPEL... - S/6.69\n9. MENTHOLATUM UNGÜENTO 5GR X 24 LATAS MEDIFARMA - S/1.27\n10. MIODEL TABLETAS 500MG + 50MG + 75MG LABORATORIO... - S/1.69\n11. (00728) ANALYTICS FOR BEGINNERS, GRUPO 28, INIC...\n12. (00742) PYTHON FOR ANALYTICS, GRUPO 24, INICIO ...\n13. (00743) POWER BI FOR USER, GRUPO 5, INICIO 05/0...\n14. (00744) PYTHON FOR ANALYTICS, GRUPO 25, INICIO ...\n15. (00745) POWER BI FOR USER, GRUPO 6, INICIO 21/0...\n\n... y 428 más.\n\n💡 Escribe un número (1-15) o busca: \"busca laptop\""
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "PROD-002",
+      "category": "products",
+      "name": "Buscar producto específico",
+      "status": "failed",
+      "duration_ms": 258.9271068572998,
+      "details": {
+        "responses": [
+          {
+            "reply": "🔍 No encontré productos con \"detergente\".\n\nTienes 443 productos en total.\n\n💡 Prueba con otro término o \"ver productos\" para la lista."
+          }
+        ],
+        "failed_at": 1,
+        "validation": {
+          "passed": false,
+          "errors": [
+            "Respuesta no contiene: 'resultados'"
+          ]
+        }
+      },
+      "errors": [
+        "Respuesta no contiene: 'resultados'"
+      ]
+    },
+    {
+      "scenario_id": "PROD-003",
+      "category": "products",
+      "name": "Seleccionar producto de búsqueda",
+      "status": "passed",
+      "duration_ms": 262.7744674682617,
+      "details": {
+        "responses": [
+          {
+            "reply": "🔍 No encontré productos con \"arroz\".\n\nTienes 443 productos en total.\n\n💡 Prueba con otro término o \"ver productos\" para la lista."
+          },
+          {
+            "reply": "📦 **Producto #1**\n\n📋 **Nombre:** POLLO BENEFICIADO ABIERTO\n💰 **Precio:** S/4.87\n📏 **Unidad:** Unidad\n🏷️ **Código:** 00020\n\n¿Deseas emitir un comprobante con este producto? (Sí/No)"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "PROD-004",
+      "category": "products",
+      "name": "Emitir desde producto seleccionado",
+      "status": "passed",
+      "duration_ms": 268.726110458374,
+      "details": {
+        "responses": [
+          {
+            "reply": "📦 **Tus productos** (15 de 443):\n\n1. POLLO BENEFICIADO ABIERTO - S/4.87\n2. COLGATE HERBAL 90G COLGATE PALMOLIVE - S/2.97\n3. POLLO BENEFICIADO V - S/4.19\n4. SERVICIOS ESPECIALIZADOS - S/4.19\n5. GALLINA MARRON CERRADA BENEFICIADA - S/5.93\n6. DIBROLAX TABLETAS, 5MG, CAJA 100 TABLETAS FARMI... - S/1.27\n7. HIGANATUR CÁPSULA BLANDA, 300MG SHERFARMA - S/2.97\n8. HUGGIES TOALLITAS HUMEDAS AMARILLA 80UNDS PAPEL... - S/6.69\n9. MENTHOLATUM UNGÜENTO 5GR X 24 LATAS MEDIFARMA - S/1.27\n10. MIODEL TABLETAS 500MG + 50MG + 75MG LABORATORIO... - S/1.69\n11. (00728) ANALYTICS FOR BEGINNERS, GRUPO 28, INIC...\n12. (00742) PYTHON FOR ANALYTICS, GRUPO 24, INICIO ...\n13. (00743) POWER BI FOR USER, GRUPO 5, INICIO 05/0...\n14. (00744) PYTHON FOR ANALYTICS, GRUPO 25, INICIO ...\n15. (00745) POWER BI FOR USER, GRUPO 6, INICIO 21/0...\n\n... y 428 más.\n\n💡 Escribe un número (1-15) o busca: \"busca laptop\""
+          },
+          {
+            "reply": "📦 **Producto #1**\n\n📋 **Nombre:** POLLO BENEFICIADO ABIERTO\n💰 **Precio:** S/4.87\n📏 **Unidad:** Unidad\n🏷️ **Código:** 00020\n\n¿Deseas emitir un comprobante con este producto? (Sí/No)"
+          },
+          {
+            "reply": "✅ Producto seleccionado: **POLLO BENEFICIADO ABIERTO** (S/4.87)\n\n¿Qué tipo de comprobante deseas?\n📄 **Factura** (requiere RUC)\n🧾 **Boleta** (DNI o RUC)\n\nEscribe \"Factura\" o \"Boleta\":"
+          }
+        ],
+        "turns": 3
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "PROD-005",
+      "category": "products",
+      "name": "Búsqueda sin resultados",
+      "status": "failed",
+      "duration_ms": 268.2604789733887,
+      "details": {
+        "responses": [
+          {
+            "reply": "¿En qué te ayudo, Sadid Romero?\n\n📄 Emitir Factura\n🧾 Emitir Boleta\n📦 Ver productos\n📊 Historial"
+          }
+        ],
+        "failed_at": 1,
+        "validation": {
+          "passed": false,
+          "errors": [
+            "Respuesta no contiene: 'no encontr'"
+          ]
+        }
+      },
+      "errors": [
+        "Respuesta no contiene: 'no encontr'"
+      ]
+    },
+    {
+      "scenario_id": "CTX-001",
+      "category": "context_switching",
+      "name": "Cambio de historial a productos",
+      "status": "passed",
+      "duration_ms": 270.05958557128906,
+      "details": {
+        "responses": [
+          {
+            "reply": "📊 **Tu historial, Sadid Romero**\n\n📅 **Hoy** (4):\n   1. 🧾 B020-00000333: S/7386.96\n   2. 🧾 B020-00000334: S/1305.00\n   3. 🧾 F004-00000011: S/40613.92\n   4. 🧾 F004-00000012: S/1660.25\n\n📋 **Últimas emisiones** (10):\n\n1. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/472.00 | 📅 2018-09-06\n\n2. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n3. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/1180.00 | 📅 2018-09-06\n\n4. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n5. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n6. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n7. Factura\n   👤 COLORES IMPRESOS S.A.C\n   💰 S/118.00 | 📅 2018-09-06\n\n8. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n9. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n10. Factura\n   👤 GOMEZ NEGOCIOS ECONOMI...\n   💰 S/2160.00 | 📅 2018-09-10\n\n💡 Escribe un número para ver detalle (ej: \"5\")"
+          },
+          {
+            "reply": "📦 **Tus productos** (15 de 443):\n\n1. POLLO BENEFICIADO ABIERTO - S/4.87\n2. COLGATE HERBAL 90G COLGATE PALMOLIVE - S/2.97\n3. POLLO BENEFICIADO V - S/4.19\n4. SERVICIOS ESPECIALIZADOS - S/4.19\n5. GALLINA MARRON CERRADA BENEFICIADA - S/5.93\n6. DIBROLAX TABLETAS, 5MG, CAJA 100 TABLETAS FARMI... - S/1.27\n7. HIGANATUR CÁPSULA BLANDA, 300MG SHERFARMA - S/2.97\n8. HUGGIES TOALLITAS HUMEDAS AMARILLA 80UNDS PAPEL... - S/6.69\n9. MENTHOLATUM UNGÜENTO 5GR X 24 LATAS MEDIFARMA - S/1.27\n10. MIODEL TABLETAS 500MG + 50MG + 75MG LABORATORIO... - S/1.69\n11. (00728) ANALYTICS FOR BEGINNERS, GRUPO 28, INIC...\n12. (00742) PYTHON FOR ANALYTICS, GRUPO 24, INICIO ...\n13. (00743) POWER BI FOR USER, GRUPO 5, INICIO 05/0...\n14. (00744) PYTHON FOR ANALYTICS, GRUPO 25, INICIO ...\n15. (00745) POWER BI FOR USER, GRUPO 6, INICIO 21/0...\n\n... y 428 más.\n\n💡 Escribe un número (1-15) o busca: \"busca laptop\""
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "CTX-002",
+      "category": "context_switching",
+      "name": "Interrupción de emisión por consulta",
+      "status": "failed",
+      "duration_ms": 257.78818130493164,
+      "details": {
+        "responses": [
+          {
+            "reply": "📄 ¡Perfecto! Vamos con la Factura.\n\nPrimero necesito validar al cliente.\n\n1️⃣ Dame el RUC (11 dígitos) para verificar que existe en el sistema\n2️⃣ Luego me indicas los productos con sus precios\n\n💡 Puedes enviarme todo junto si lo prefieres:\n\"RUC 20161541991, 3 laptops a 2500\"\n\n¿Cuál es el RUC del cliente?"
+          },
+          {
+            "reply": "Escribe el DNI (8 dígitos) o RUC (11 dígitos):"
+          }
+        ],
+        "failed_at": 2,
+        "validation": {
+          "passed": false,
+          "errors": [
+            "Respuesta no contiene: 'IGV'"
+          ]
+        }
+      },
+      "errors": [
+        "Respuesta no contiene: 'IGV'"
+      ]
+    },
+    {
+      "scenario_id": "EDGE-001",
+      "category": "edge_cases",
+      "name": "Producto con precio muy bajo",
+      "status": "passed",
+      "duration_ms": 2886.536121368408,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22494018.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EDGE-002",
+      "category": "edge_cases",
+      "name": "Múltiples productos mismo nombre",
+      "status": "failed",
+      "duration_ms": 268.2619094848633,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22494018.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "failed_at": 1,
+        "validation": {
+          "passed": false,
+          "errors": [
+            "Respuesta no contiene: 'resultados'"
+          ]
+        }
+      },
+      "errors": [
+        "Respuesta no contiene: 'resultados'"
+      ]
+    },
+    {
+      "scenario_id": "EDGE-003",
+      "category": "edge_cases",
+      "name": "Cantidad alta de productos",
+      "status": "passed",
+      "duration_ms": 1965.3253555297852,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495143.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EDGE-004",
+      "category": "edge_cases",
+      "name": "Precio con decimales",
+      "status": "passed",
+      "duration_ms": 267.0023441314697,
+      "details": {
+        "responses": [
+          {
+            "reply": "📝 3 leche\n\n¿Precio unitario?"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "EDGE-005",
+      "category": "edge_cases",
+      "name": "Mensaje vacío o espacios",
+      "status": "passed",
+      "duration_ms": 266.7114734649658,
+      "details": {
+        "responses": [
+          {
+            "reply": "No recibí ningún mensaje. ¿En qué puedo ayudarte?"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "FORM-001",
+      "category": "format_variations",
+      "name": "DNI con espacios",
+      "status": "passed",
+      "duration_ms": 263.2467746734619,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495259.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "FORM-002",
+      "category": "format_variations",
+      "name": "Precio con formato diferente",
+      "status": "passed",
+      "duration_ms": 262.678861618042,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495350.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "FORM-003",
+      "category": "format_variations",
+      "name": "Cantidad en palabras",
+      "status": "passed",
+      "duration_ms": 268.8579559326172,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495360.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "MULTI-001",
+      "category": "multi_turn",
+      "name": "Conversación larga de emisión",
+      "status": "passed",
+      "duration_ms": 276.1697769165039,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495360.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495360.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495360.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📝 5 detergente\n\n¿Precio unitario?"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/22495360.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 5
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "MULTI-002",
+      "category": "multi_turn",
+      "name": "Agregar más productos",
+      "status": "passed",
+      "duration_ms": 269.989013671875,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/60086035.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/60086065.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/60086065.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 3
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "CORR-001",
+      "category": "corrections",
+      "name": "Corregir documento",
+      "status": "passed",
+      "duration_ms": 256.9296360015869,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/60086115.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/60086115.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "STRESS-001",
+      "category": "stress_tests",
+      "name": "Muchos productos en una emisión",
+      "status": "passed",
+      "duration_ms": 261.6455554962158,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/60086841.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "STRESS-002",
+      "category": "stress_tests",
+      "name": "Descripción de producto muy larga",
+      "status": "passed",
+      "duration_ms": 264.20044898986816,
+      "details": {
+        "responses": [
+          {
+            "reply": "📝 1 nosotras\n\n¿Precio unitario?"
+          }
+        ],
+        "turns": 1
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "INTENT-001",
+      "category": "intent_classification",
+      "name": "Intent: Emisión explícita",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "input": "Quiero emitir una factura",
+        "intent": "EMIT_INVOICE"
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "INTENT-002",
+      "category": "intent_classification",
+      "name": "Intent: Consulta productos",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "input": "Ver mis productos",
+        "intent": "QUERY_PRODUCTS"
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "INTENT-003",
+      "category": "intent_classification",
+      "name": "Intent: Consulta historial",
+      "status": "failed",
+      "duration_ms": 0.0,
+      "details": {
+        "expected": "QUERY_HISTORY",
+        "got": "GREETING"
+      },
+      "errors": [
+        "Intent esperado: QUERY_HISTORY, obtenido: GREETING"
+      ]
+    },
+    {
+      "scenario_id": "INTENT-004",
+      "category": "intent_classification",
+      "name": "Intent: Pregunta general",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "input": "¿Qué diferencia hay entre factura y boleta?",
+        "intent": "GENERAL_QUESTION"
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "INTENT-005",
+      "category": "intent_classification",
+      "name": "Intent: Cancelación",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "input": "Cancelar",
+        "intent": "CANCEL"
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "INTENT-006",
+      "category": "intent_classification",
+      "name": "Intent: Confirmación",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "input": "Si, confirmo",
+        "intent": "CONFIRMATION"
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "INTENT-007",
+      "category": "intent_classification",
+      "name": "Intent: Saludo",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "input": "Hola buenos días",
+        "intent": "GREETING"
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "DATA-001",
+      "category": "data_extraction",
+      "name": "Extraer DNI de mensaje",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "extracted": {
+          "document_type": "03",
+          "id_type": "1",
+          "id_number": "22462864"
+        },
+        "expected": {
+          "document_type": "03",
+          "id_type": "1",
+          "id_number": "22462864"
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "DATA-002",
+      "category": "data_extraction",
+      "name": "Extraer RUC de mensaje",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "extracted": {
+          "document_type": "01",
+          "id_type": "6",
+          "id_number": "20609029189"
+        },
+        "expected": {
+          "document_type": "01",
+          "id_type": "6",
+          "id_number": "20609029189"
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "DATA-003",
+      "category": "data_extraction",
+      "name": "Extraer productos de mensaje",
+      "status": "passed",
+      "duration_ms": 2.0296573638916016,
+      "details": {
+        "extracted": {
+          "items": [
+            {
+              "cantidad": "3",
+              "descripcion": "jabones",
+              "precio": "5"
+            },
+            {
+              "cantidad": "2",
+              "descripcion": "detergentes",
+              "precio": "10"
+            }
+          ]
+        },
+        "expected": {
+          "items": [
+            {
+              "cantidad": "3",
+              "precio": "5"
+            },
+            {
+              "cantidad": "2",
+              "precio": "10"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "DATA-004",
+      "category": "data_extraction",
+      "name": "Extraer mensaje completo",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "extracted": {
+          "document_type": "03",
+          "id_type": "1",
+          "id_number": "41580986",
+          "items": [
+            {
+              "cantidad": "5",
+              "descripcion": "PANETON DONOFRIO LATA 880GR X 6UNI",
+              "precio": "41"
+            }
+          ]
+        },
+        "expected": {
+          "document_type": "03",
+          "id_number": "41580986",
+          "items": [
+            {
+              "cantidad": "5",
+              "descripcion": "PANETON DONOFRIO LATA 880GR X 6UNI",
+              "precio": "41"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "REAL-001",
+      "category": "real_emission_tests",
+      "name": "Emisión real - Boleta con DNI válido 1",
+      "status": "passed",
+      "duration_ms": 2244.346857070923,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/82550831.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "REAL-002",
+      "category": "real_emission_tests",
+      "name": "Emisión real - Factura con RUC válido 1",
+      "status": "passed",
+      "duration_ms": 266.2076950073242,
+      "details": {
+        "responses": [
+          {
+            "reply": "📝 2 detergente\n\n¿Precio unitario?"
+          },
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/82550831.10\n\n¿Emitir? ✅ Sí / ❌ No"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "REAL-003",
+      "category": "real_emission_tests",
+      "name": "Emisión real - Boleta múltiples items",
+      "status": "passed",
+      "duration_ms": 2303.835153579712,
+      "details": {
+        "responses": [
+          {
+            "reply": "📋 FACTURA 📄\n\n📋 DNI: 22494016\n👤 RODOLFO RAPHAEL SERNA ROMAN\n\n📦 Productos:\n  • 1x escaler @ S/2.00 = S/2.00\n  • 1x milo @ S/0.10 = S/0.10\n  • 1x POLLO BENEFICIADO ABIERTO @ S/22494016.00 = S/22494016.00\n  • 25x kg @ S/45.00 = S/1125.00\n  • 1x producto @ S/50.00 = S/50.00\n  • 3x leche @ S/22.00 = S/66.00\n  • 2x items @ S/45.50 = S/91.00\n  • 2x jabones @ S/5.00 = S/10.00\n  • 5x detergente @ S/7518135.00 = S/37590675.00\n  • 3x detergentes @ S/10.00 = S/30.00\n  • 1x item @ S/50.00 = S/50.00\n  • 1x arroz @ S/45.00 = S/45.00\n  • 2x azucar @ S/123.00 = S/246.00\n  • 3x aceite @ S/45.00 = S/135.00\n  • 4x jabon @ S/5.00 = S/20.00\n  • 5x detergente @ S/56.00 = S/280.00\n  • 1x paneton donofrio lat @ S/880.00 = S/880.00\n  • 6x uni @ S/41.00 = S/246.00\n  • 1x nosotras @ S/22462864.00 = S/22462864.00\n  • 2x jabon neko bols @ S/110.00 = S/220.00\n  • 48x uni @ S/147.02 = S/7056.96\n  • 4x bidon @ S/45.00 = S/180.00\n  • 2x detergente @ S/41580986.00 = S/83161972.00\n\n━━━━━━━━━━━━\n💵 TOTAL: S/165720260.06\n\n¿Emitir? ✅ Sí / ❌ No"
+          },
+          {
+            "reply": "⚠️ Error: XX- errorCode; 2800 error: INFO : 2800 (nodo: \"cbc:ID/schemeID\" valor: \"1\")"
+          }
+        ],
+        "turns": 2
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "BATCH-DNI-001",
+      "category": "batch_validation",
+      "name": "Validación batch de DNIs",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "results": [
+          {
+            "document": "22462864",
+            "valid": true
+          },
+          {
+            "document": "22494016",
+            "valid": true
+          },
+          {
+            "document": "41580986",
+            "valid": true
+          },
+          {
+            "document": "22477390",
+            "valid": true
+          },
+          {
+            "document": "22502870",
+            "valid": true
+          }
+        ],
+        "all_valid": true
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "BATCH-RUC-001",
+      "category": "batch_validation",
+      "name": "Validación batch de RUCs",
+      "status": "passed",
+      "duration_ms": 0.0,
+      "details": {
+        "results": [
+          {
+            "document": "10422980925",
+            "valid": true
+          },
+          {
+            "document": "20609029189",
+            "valid": true
+          },
+          {
+            "document": "20573293275",
+            "valid": true
+          },
+          {
+            "document": "20601080134",
+            "valid": true
+          },
+          {
+            "document": "20362427798",
+            "valid": true
+          }
+        ],
+        "all_valid": true
+      },
+      "errors": []
+    }
+  ]
+}

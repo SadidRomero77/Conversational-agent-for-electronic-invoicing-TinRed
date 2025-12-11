@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: tinred_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/app/.env
+    networks:
+      - tinred_net
+
+  frontend:
+    build: ./frontend
+    container_name: tinred_frontend
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=http://backend:8000
+    networks:
+      - tinred_net
+    volumes:
+      - ./frontend:/usr/src/app
+
+networks:
+  tinred_net:
+    driver: bridge

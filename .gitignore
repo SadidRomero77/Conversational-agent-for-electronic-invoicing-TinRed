@@ -1,0 +1,178 @@
+# ===================================
+# VARIABLES DE ENTORNO Y SECRETOS
+# ===================================
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env*.local
+*.env
+.envrc
+
+# API Keys y credenciales
+secrets.json
+credentials.json
+*.pem
+*.key
+*.crt
+*.p12
+
+# ===================================
+# PYTHON
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.conda/
+conda-env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ===================================
+# NODE.JS / TYPESCRIPT
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# ===================================
+# WHATSAPP / BAILEYS
+# ===================================
+auth_info/
+auth_info_baileys/
+session/
+*.session
+*.session.json
+store/
+baileys_store/
+
+# ===================================
+# LOGS
+# ===================================
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===================================
+# IDEs Y EDITORES
+# ===================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ===================================
+# SISTEMA OPERATIVO
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===================================
+# DOCKER
+# ===================================
+.docker/
+docker-compose.override.yml
+
+# ===================================
+# TEMPORALES Y CACHE
+# ===================================
+tmp/
+temp/
+.temp/
+.tmp/
+.cache/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ===================================
+# ARCHIVOS DE DATOS LOCALES
+# ===================================
+*.db
+*.sqlite
+*.sqlite3
+data/
+uploads/
+downloads/
+
+# ===================================
+# COMPROBANTES Y PDFs GENERADOS
+# ===================================
+comprobantes/
+pdfs/
+*.pdf
+
+# ===================================
+# TESTS
+# ===================================
+coverage/
+.nyc_output/
+test-results/

@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-11-25T12:00:00",
+  "model_name": "test-model",
+  "total_scenarios": 10,
+  "passed_scenarios": 8,
+  "failed_scenarios": 2,
+  "metrics": {
+    "task_success_rate": 0.8,
+    "data_extraction_accuracy": 0.9,
+    "intent_f1_score": 0.85,
+    "latency_p95_ms": 500
+  },
+  "targets_met": {
+    "task_success": false,
+    "extraction": false,
+    "intent_f1": false,
+    "latency": true
+  },
+  "overall_pass": false,
+  "scenarios": [
+    {
+      "id": "TEST-001",
+      "category": "test",
+      "success": true,
+      "error": null,
+      "latency_ms": 0.0,
+      "task_completion": {
+        "success": true,
+        "score": 0.9,
+        "reason": "Test OK"
+      }
+    }
+  ]
+}
